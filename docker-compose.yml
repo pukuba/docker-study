@@ -11,7 +11,7 @@ services:
     restart: "unless-stopped" # 내부에서 에러로 인해 container가 죽을 경우 restart
   express:
     build:
-      context: ./server  # 빌드할 Dockerfile이 위치한 경로
+      context: ./source  # 빌드할 Dockerfile이 위치한 경로
     container_name: express
     expose:
       - "3000"           # 다른 컨테이너에게 3000번 포트 open
